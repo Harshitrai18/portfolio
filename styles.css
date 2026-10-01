@@ -417,17 +417,23 @@
   /* ---------- Projects ---------- */
   .projects{
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:22px;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+    align-items:stretch;
   }
   .card{
-    border:1px solid var(--line);
-    border-radius:var(--radius);
-    background:var(--paper);
-    padding:26px 26px 24px;
-    display:flex;
-    flex-direction:column;
-    transition:border-color .15s ease, transform .15s ease;
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:26px;
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  min-height:320px;
+  transition:
+    border-color .2s ease,
+    transform .2s ease,
+    background-color .25s ease;
   }
   .card:hover{
     border-color:var(--accent);
